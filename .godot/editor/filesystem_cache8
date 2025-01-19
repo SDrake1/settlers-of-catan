@@ -1,4 +1,9 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1737203832
+::res://::1737294906
 icon.svg::CompressedTexture2D::1233663219451541702::1737198216::1737198228::1::::<><>::
+tile-map-krita.png::CompressedTexture2D::5796398009588427414::1737294611::1737294907::1::::<><>::
+tile-map-rotated.png::CompressedTexture2D::1179028228967783311::1737294906::1737294907::1::::<><>::
+tile_map_layer.gd::GDScript::-1::1737293657::0::1::::<>TileMapLayer<>::
+tile-map-1.png::CompressedTexture2D::3877574182320799155::1737292585::1737293093::1::::<><>::
 tile-map.png::CompressedTexture2D::3101193674040265330::1737203832::1737203835::1::::<><>::
+tile_map_layer.tscn::PackedScene::2014118747645869316::1737232394::0::1::::<><>::uid://bkgiha78hoa07::::res://tile-map.png
