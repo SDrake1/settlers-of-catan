@@ -1,6 +1,7 @@
+CollisionShape2D
+Area2D
 Control
 Node
 Label
 TileMapLayer
-Area2D
 ResourcePreloader

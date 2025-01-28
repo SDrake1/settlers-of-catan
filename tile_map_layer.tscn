@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://ct8dndrvrvuic" path="res://tiles.png" id="4_whdrv"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ag1qo"]
-load_path = "res://.godot/imported/tile-map.png-c81956148eea09e244449512255001b0.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uhlem"]
 texture = SubResource("CompressedTexture2D_ag1qo")
@@ -18,7 +17,6 @@ texture_region_size = Vector2i(149, 130)
 5:0/0 = 0
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_agtq8"]
-load_path = "res://.godot/imported/tile-map-1.png-a854a56fcf94d8c7b767fd9ccf44e22c.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tkatt"]
 texture = SubResource("CompressedTexture2D_agtq8")
@@ -33,7 +31,6 @@ texture_region_size = Vector2i(149, 131)
 6:0/0 = 0
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vexxs"]
-load_path = "res://.godot/imported/tile-map-rotated.png-4d4fdba8a9008bf7b94c0eb0fe677e72.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h1xkh"]
 texture = SubResource("CompressedTexture2D_vexxs")
@@ -100,6 +97,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="1,1" type="Label" parent="numbers"]
+layout_mode = 0
 offset_left = 901.818
 offset_top = 249.561
 offset_right = 922.818
@@ -110,6 +108,7 @@ text = "1
 "
 
 [node name="1,2" type="Label" parent="numbers"]
+layout_mode = 0
 offset_left = 1078.18
 offset_top = 251.318
 offset_right = 1099.18
@@ -120,6 +119,7 @@ text = "1
 "
 
 [node name="1,3" type="Label" parent="numbers"]
+layout_mode = 0
 offset_left = 1256.36
 offset_top = 249.561
 offset_right = 1277.36
@@ -130,6 +130,7 @@ text = "1
 "
 
 [node name="2,1" type="Label" parent="numbers"]
+layout_mode = 0
 offset_left = 812.727
 offset_top = 398.945
 offset_right = 833.727
@@ -140,6 +141,7 @@ text = "1
 "
 
 [node name="2,2" type="Label" parent="numbers"]
+layout_mode = 0
 offset_left = 992.727
 offset_top = 398.945
 offset_right = 1013.73
@@ -150,6 +152,7 @@ text = "1
 "
 
 [node name="2,3" type="Label" parent="numbers"]
+layout_mode = 0
 offset_left = 1169.09
 offset_top = 402.46
 offset_right = 1190.09
@@ -160,6 +163,7 @@ text = "1
 "
 
 [node name="2,4" type="Label" parent="numbers"]
+layout_mode = 0
 offset_left = 1343.64
 offset_top = 402.46
 offset_right = 1364.64
@@ -170,6 +174,7 @@ text = "1
 "
 
 [node name="3,1" type="Label" parent="numbers"]
+layout_mode = 0
 offset_left = 725.454
 offset_top = 553.603
 offset_right = 746.454
@@ -180,6 +185,7 @@ text = "1
 "
 
 [node name="3,2" type="Label" parent="numbers"]
+layout_mode = 0
 offset_left = 901.818
 offset_top = 551.845
 offset_right = 922.818
@@ -190,6 +196,7 @@ text = "1
 "
 
 [node name="3,3" type="Label" parent="numbers"]
+layout_mode = 0
 offset_left = 1078.18
 offset_top = 550.088
 offset_right = 1099.18
@@ -200,6 +207,7 @@ text = "1
 "
 
 [node name="3,4" type="Label" parent="numbers"]
+layout_mode = 0
 offset_left = 1254.55
 offset_top = 550.088
 offset_right = 1275.55
@@ -210,6 +218,7 @@ text = "1
 "
 
 [node name="3,5" type="Label" parent="numbers"]
+layout_mode = 0
 offset_left = 1430.91
 offset_top = 551.845
 offset_right = 1451.91
@@ -220,6 +229,7 @@ text = "1
 "
 
 [node name="4,1" type="Label" parent="numbers"]
+layout_mode = 0
 offset_left = 810.909
 offset_top = 702.988
 offset_right = 831.909
@@ -230,6 +240,7 @@ text = "1
 "
 
 [node name="4,2" type="Label" parent="numbers"]
+layout_mode = 0
 offset_left = 989.091
 offset_top = 701.23
 offset_right = 1010.09
@@ -240,6 +251,7 @@ text = "1
 "
 
 [node name="4,3" type="Label" parent="numbers"]
+layout_mode = 0
 offset_left = 1169.09
 offset_top = 701.23
 offset_right = 1190.09
@@ -250,6 +262,7 @@ text = "1
 "
 
 [node name="4,4" type="Label" parent="numbers"]
+layout_mode = 0
 offset_left = 1343.64
 offset_top = 702.988
 offset_right = 1364.64
@@ -260,6 +273,7 @@ text = "1
 "
 
 [node name="5,1" type="Label" parent="numbers"]
+layout_mode = 0
 offset_left = 900.0
 offset_top = 852.373
 offset_right = 921.0
@@ -270,6 +284,7 @@ text = "1
 "
 
 [node name="5,2" type="Label" parent="numbers"]
+layout_mode = 0
 offset_left = 1078.18
 offset_top = 852.373
 offset_right = 1099.18
@@ -280,6 +295,7 @@ text = "1
 "
 
 [node name="5,3" type="Label" parent="numbers"]
+layout_mode = 0
 offset_left = 1256.36
 offset_top = 855.888
 offset_right = 1277.36
