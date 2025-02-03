@@ -1,6 +1,12 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1737680391
+::res://::1738573954
 icon.svg::CompressedTexture2D::1233663219451541702::1737328568::1737328682::1::::<><>::
 tiles.png::CompressedTexture2D::6174759413501288954::1737333703::1737333703::1::::<><>::
-tile_map_layer.gd::GDScript::-1::1737336207::0::1::::<>TileMapLayer<>::
-tile_map_layer.tscn::PackedScene::2014118747645869316::1737336411::0::1::::<><>::res://tile_map_layer.gd<>uid://ct8dndrvrvuic::::res://tiles.png
+tile_map_layer.gd::GDScript::-1::1738112040::0::1::::<>TileMapLayer<>::
+tile_map_layer.tscn::PackedScene::2014118747645869316::1738112393::0::1::::<><>::res://tile_map_layer.gd<>uid://ct8dndrvrvuic::::res://tiles.png
+::res://Assets/::1738573954
+big_circle.png::CompressedTexture2D::1682586906558846964::1738573936::1738573948::1::::<><>::
+city.png::CompressedTexture2D::3203058335239766532::1738573936::1738573949::1::::<><>::
+dot.png::CompressedTexture2D::4599763569059744489::1738573936::1738573951::1::::<><>::
+settlement.png::CompressedTexture2D::3011183577494652486::1738573936::1738573952::1::::<><>::
+street.png::CompressedTexture2D::2982147312251755790::1738573936::1738573954::1::::<><>::

@@ -1,2 +1,4 @@
 res://tile_map_layer.tscn
 res://tile_map_layer.gd
+res://building_nodes.gd
+res://Building.tscn
