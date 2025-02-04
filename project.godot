@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Settlers of Catan"
-run/main_scene="res://tile_map_layer.tscn"
+run/main_scene="res://Scenes/tile_map_layer.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*res://Scripts/global.gd"
 
 [input]
 
