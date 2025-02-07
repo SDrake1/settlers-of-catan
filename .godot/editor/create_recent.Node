@@ -1,5 +1,6 @@
-Label
 Button
+GridContainer
+Label
 CanvasGroup
 CollisionShape2D
 Area2D
