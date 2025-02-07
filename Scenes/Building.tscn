@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://csycdf261mgk2"]
+
+[ext_resource type="Texture2D" uid="uid://bi5v0ve1vvaxa" path="res://Assets/settlement.png" id="1_05rei"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_acj52"]
+radius = 60.0
+
+[node name="Building" type="Sprite2D"]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_05rei")
+
+[node name="Area2D" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_acj52")

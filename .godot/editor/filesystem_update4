@@ -1,2 +1,4 @@
-res://tile_map_layer.tscn
-res://tile_map_layer.gd
+res://Scenes/tile_map_layer.tscn
+res://Scenes/Building.tscn
+res://Scenes/turn_tracker.gd
+res://Scripts/building_nodes.gd

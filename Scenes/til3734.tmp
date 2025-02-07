@@ -1,0 +1,1247 @@
+[gd_scene load_steps=16 format=4 uid="uid://3xwihgg5m45u"]
+
+[ext_resource type="Texture2D" uid="uid://ct8dndrvrvuic" path="res://Assets/tiles.png" id="1_6r8as"]
+[ext_resource type="Script" path="res://Scripts/tile_map_layer.gd" id="2_l5p4e"]
+[ext_resource type="Texture2D" uid="uid://x8b7wmmemhbw" path="res://Assets/big_circle.png" id="3_ayq6f"]
+[ext_resource type="Script" path="res://Scripts/building_nodes.gd" id="4_10npc"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ag1qo"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uhlem"]
+texture = SubResource("CompressedTexture2D_ag1qo")
+margins = Vector2i(128, 65)
+texture_region_size = Vector2i(149, 130)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_agtq8"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tkatt"]
+texture = SubResource("CompressedTexture2D_agtq8")
+margins = Vector2i(0, 11)
+texture_region_size = Vector2i(149, 131)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vexxs"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h1xkh"]
+texture = SubResource("CompressedTexture2D_vexxs")
+margins = Vector2i(1, 1)
+separation = Vector2i(3, 0)
+texture_region_size = Vector2i(129, 149)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_b1e67"]
+load_path = "res://.godot/imported/tiles.png-20e12ed313f9b52ca4483ea23302e684.ctex"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ls7pr"]
+texture = SubResource("CompressedTexture2D_b1e67")
+texture_region_size = Vector2i(177, 201)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4h6k1"]
+texture = ExtResource("1_6r8as")
+texture_region_size = Vector2i(177, 201)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_rohk6"]
+tile_shape = 3
+tile_size = Vector2i(177, 201)
+sources/0 = SubResource("TileSetAtlasSource_uhlem")
+sources/1 = SubResource("TileSetAtlasSource_tkatt")
+sources/2 = SubResource("TileSetAtlasSource_h1xkh")
+sources/3 = SubResource("TileSetAtlasSource_ls7pr")
+sources/5 = SubResource("TileSetAtlasSource_4h6k1")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4yx6r"]
+radius = 14.5453
+
+[node name="TileMapLayer" type="TileMapLayer"]
+position = Vector2(82, 12)
+scale = Vector2(0.55, 0.569)
+tile_map_data = PackedByteArray("AAAHAAAABQAAAAAAAAAGAAAABQAAAAAAAAAFAAAABQAAAAAAAAAEAAAABQAAAAAAAAADAAEABQAAAAAAAAADAAIABQAAAAAAAAACAAMABQAAAAAAAAADAAQABQAAAAAAAAADAAUABQAAAAAAAAAHAAYABQAAAAAAAAAHAAUABQAAAAAAAAAIAAMABQAAAAAAAAAIAAQABQAAAAAAAAAIAAIABQAAAAAAAAAHAAEABQAAAAAAAAAEAAYABQAAAAAAAAAFAAYABQAAAAAAAAAGAAYABQAAAAAAAAAEAAEABQABAAAAAAAFAAEABQABAAAAAAAGAAEABQABAAAAAAAHAAIABQABAAAAAAAHAAMABQABAAAAAAAHAAQABQABAAAAAAAGAAUABQABAAAAAAAFAAUABQABAAAAAAAEAAUABQABAAAAAAAEAAQABQABAAAAAAADAAMABQABAAAAAAAEAAIABQABAAAAAAAFAAIABQABAAAAAAAEAAMABQABAAAAAAAFAAQABQABAAAAAAAGAAQABQABAAAAAAAGAAMABQABAAAAAAAGAAIABQABAAAAAAAFAAMABQABAAAAAAA=")
+tile_set = SubResource("TileSet_rohk6")
+script = ExtResource("2_l5p4e")
+
+[node name="highlight" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+visible = false
+position = Vector2(752.727, 325.132)
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("3_ayq6f")
+
+[node name="numbers" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="1,1" type="Label" parent="numbers"]
+layout_mode = 0
+offset_left = 901.818
+offset_top = 249.561
+offset_right = 922.818
+offset_bottom = 299.561
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "1
+"
+
+[node name="1,2" type="Label" parent="numbers"]
+layout_mode = 0
+offset_left = 1078.18
+offset_top = 251.318
+offset_right = 1099.18
+offset_bottom = 301.318
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "1
+"
+
+[node name="1,3" type="Label" parent="numbers"]
+layout_mode = 0
+offset_left = 1256.36
+offset_top = 249.561
+offset_right = 1277.36
+offset_bottom = 299.561
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "1
+"
+
+[node name="2,1" type="Label" parent="numbers"]
+layout_mode = 0
+offset_left = 812.727
+offset_top = 398.945
+offset_right = 833.727
+offset_bottom = 448.945
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "1
+"
+
+[node name="2,2" type="Label" parent="numbers"]
+layout_mode = 0
+offset_left = 992.727
+offset_top = 398.945
+offset_right = 1013.73
+offset_bottom = 448.945
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "1
+"
+
+[node name="2,3" type="Label" parent="numbers"]
+layout_mode = 0
+offset_left = 1169.09
+offset_top = 402.46
+offset_right = 1190.09
+offset_bottom = 452.46
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "1
+"
+
+[node name="2,4" type="Label" parent="numbers"]
+layout_mode = 0
+offset_left = 1343.64
+offset_top = 402.46
+offset_right = 1364.64
+offset_bottom = 452.46
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "1
+"
+
+[node name="3,1" type="Label" parent="numbers"]
+layout_mode = 0
+offset_left = 725.454
+offset_top = 553.603
+offset_right = 746.454
+offset_bottom = 603.603
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "1
+"
+
+[node name="3,2" type="Label" parent="numbers"]
+layout_mode = 0
+offset_left = 901.818
+offset_top = 551.845
+offset_right = 922.818
+offset_bottom = 601.845
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "1
+"
+
+[node name="3,3" type="Label" parent="numbers"]
+layout_mode = 0
+offset_left = 1078.18
+offset_top = 550.088
+offset_right = 1099.18
+offset_bottom = 600.088
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "1
+"
+
+[node name="3,4" type="Label" parent="numbers"]
+layout_mode = 0
+offset_left = 1254.55
+offset_top = 550.088
+offset_right = 1275.55
+offset_bottom = 600.088
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "1
+"
+
+[node name="3,5" type="Label" parent="numbers"]
+layout_mode = 0
+offset_left = 1430.91
+offset_top = 551.845
+offset_right = 1451.91
+offset_bottom = 601.845
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "1
+"
+
+[node name="4,1" type="Label" parent="numbers"]
+layout_mode = 0
+offset_left = 810.909
+offset_top = 702.988
+offset_right = 831.909
+offset_bottom = 752.988
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "1
+"
+
+[node name="4,2" type="Label" parent="numbers"]
+layout_mode = 0
+offset_left = 989.091
+offset_top = 701.23
+offset_right = 1010.09
+offset_bottom = 751.23
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "1
+"
+
+[node name="4,3" type="Label" parent="numbers"]
+layout_mode = 0
+offset_left = 1169.09
+offset_top = 701.23
+offset_right = 1190.09
+offset_bottom = 751.23
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "1
+"
+
+[node name="4,4" type="Label" parent="numbers"]
+layout_mode = 0
+offset_left = 1343.64
+offset_top = 702.988
+offset_right = 1364.64
+offset_bottom = 752.988
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "1
+"
+
+[node name="5,1" type="Label" parent="numbers"]
+layout_mode = 0
+offset_left = 900.0
+offset_top = 852.373
+offset_right = 921.0
+offset_bottom = 902.373
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "1
+"
+
+[node name="5,2" type="Label" parent="numbers"]
+layout_mode = 0
+offset_left = 1078.18
+offset_top = 852.373
+offset_right = 1099.18
+offset_bottom = 902.373
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "1
+"
+
+[node name="5,3" type="Label" parent="numbers"]
+layout_mode = 0
+offset_left = 1256.36
+offset_top = 855.888
+offset_right = 1277.36
+offset_bottom = 905.888
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "1
+"
+
+[node name="building nodes" type="Node2D" parent="."]
+position = Vector2(1061.82, 543.058)
+script = ExtResource("4_10npc")
+
+[node name="buildings" type="Node2D" parent="building nodes"]
+
+[node name="Area2D" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(-176.364, -391.916)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D2" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(-261.818, -342.707)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D2"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D3" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(-0.00012207, -391.916)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D3"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D4" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(-85.4547, -342.707)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D4"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D5" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(176.363, -391.916)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D5"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D6" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(90.9088, -342.707)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D6"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D7" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(-265.455, -240.773)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D7"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D8" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(-350.909, -191.564)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D8"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D9" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(-87.2726, -244.288)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D9"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D10" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(-172.727, -195.079)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D10"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D11" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(89.0909, -242.531)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D11"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D12" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(3.63635, -193.322)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D12"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D13" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(265.454, -240.773)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D13"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D14" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(180, -191.564)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D14"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D15" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(-352.727, -91.3884)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D15"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D16" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(-438.182, -42.1793)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D16"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D17" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(-176.364, -91.3884)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D17"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D18" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(-261.818, -42.1793)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D18"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D19" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(-0.00012207, -91.3884)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D19"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D20" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(-85.4547, -42.1793)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D20"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D21" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(178.182, -89.6309)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D21"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D22" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(92.7273, -40.4218)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D22"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D23" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(356.364, -87.8735)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D23"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D24" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(270.909, -38.6643)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D24"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D25" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(-263.636, 61.5114)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D25"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D26" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(-349.091, 110.721)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D26"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D27" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(-87.2729, 63.2689)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D27"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D28" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(-172.728, 112.478)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D28"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D29" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(89.0909, 59.754)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D29"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D30" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(3.63635, 108.963)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D30"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D31" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(265.454, 61.5114)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D31"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D32" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(180, 110.721)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D32"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D33" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(-176.364, 210.896)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D33"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D34" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(-261.818, 260.105)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D34"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D35" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(-0.00012207, 209.139)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D35"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D36" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(-85.4547, 258.348)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D36"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D37" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(178.182, 210.896)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D37"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D38" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(92.7273, 260.105)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D38"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D39" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(90.9091, 362.039)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D39"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D40" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(178.182, 409.49)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D40"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D41" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(1.81812, 411.248)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D41"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D42" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(-85.4546, 362.039)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D42"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D43" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(-176.364, 409.49)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D43"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D44" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(-261.818, 358.524)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D44"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D45" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(-352.727, 207.381)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D45"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D46" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(267.273, 260.105)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D46"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D47" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(267.273, 360.281)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D47"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D48" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(354.545, 209.139)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D48"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D49" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(354.545, 110.721)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D49"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D50" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(443.636, 61.5114)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D50"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D51" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(441.818, -42.1793)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D51"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D52" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(354.545, -191.564)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D52"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D53" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(265.454, -344.464)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D53"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D54" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(-441.818, 57.9965)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D54"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D55" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(178.182, 210.896)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D55"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D56" type="Area2D" parent="building nodes/buildings"]
+position = Vector2(92.7273, 260.105)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/buildings/Area2D56"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="ne_sw roads" type="Node2D" parent="building nodes"]
+
+[node name="Area2D3" type="Area2D" parent="building nodes/ne_sw roads"]
+position = Vector2(-220, -369.069)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/ne_sw roads/Area2D3"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D4" type="Area2D" parent="building nodes/ne_sw roads"]
+position = Vector2(-43.6365, -369.069)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/ne_sw roads/Area2D4"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D5" type="Area2D" parent="building nodes/ne_sw roads"]
+position = Vector2(132.727, -369.069)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/ne_sw roads/Area2D5"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D6" type="Area2D" parent="building nodes/ne_sw roads"]
+position = Vector2(-309.091, -217.926)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/ne_sw roads/Area2D6"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D7" type="Area2D" parent="building nodes/ne_sw roads"]
+position = Vector2(-130.909, -221.441)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/ne_sw roads/Area2D7"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D8" type="Area2D" parent="building nodes/ne_sw roads"]
+position = Vector2(45.4546, -219.684)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/ne_sw roads/Area2D8"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D9" type="Area2D" parent="building nodes/ne_sw roads"]
+position = Vector2(221.818, -217.926)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/ne_sw roads/Area2D9"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D10" type="Area2D" parent="building nodes/ne_sw roads"]
+position = Vector2(-396.364, -68.5413)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/ne_sw roads/Area2D10"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D11" type="Area2D" parent="building nodes/ne_sw roads"]
+position = Vector2(-220, -68.5413)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/ne_sw roads/Area2D11"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D12" type="Area2D" parent="building nodes/ne_sw roads"]
+position = Vector2(-43.6365, -68.5413)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/ne_sw roads/Area2D12"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D13" type="Area2D" parent="building nodes/ne_sw roads"]
+position = Vector2(134.545, -66.7838)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/ne_sw roads/Area2D13"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D14" type="Area2D" parent="building nodes/ne_sw roads"]
+position = Vector2(312.727, -65.0264)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/ne_sw roads/Area2D14"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D15" type="Area2D" parent="building nodes/ne_sw roads"]
+position = Vector2(-307.273, 84.3585)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/ne_sw roads/Area2D15"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D16" type="Area2D" parent="building nodes/ne_sw roads"]
+position = Vector2(-130.909, 86.116)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/ne_sw roads/Area2D16"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D17" type="Area2D" parent="building nodes/ne_sw roads"]
+position = Vector2(45.4546, 82.6011)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/ne_sw roads/Area2D17"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D18" type="Area2D" parent="building nodes/ne_sw roads"]
+position = Vector2(221.818, 84.3585)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/ne_sw roads/Area2D18"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D19" type="Area2D" parent="building nodes/ne_sw roads"]
+position = Vector2(-220, 233.743)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/ne_sw roads/Area2D19"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D20" type="Area2D" parent="building nodes/ne_sw roads"]
+position = Vector2(-43.6365, 231.986)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/ne_sw roads/Area2D20"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D21" type="Area2D" parent="building nodes/ne_sw roads"]
+position = Vector2(134.545, 233.743)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/ne_sw roads/Area2D21"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D22" type="Area2D" parent="building nodes/ne_sw roads"]
+position = Vector2(49.0909, 383.128)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/ne_sw roads/Area2D22"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D23" type="Area2D" parent="building nodes/ne_sw roads"]
+position = Vector2(-125.455, 379.613)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/ne_sw roads/Area2D23"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D24" type="Area2D" parent="building nodes/ne_sw roads"]
+position = Vector2(227.273, 384.886)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/ne_sw roads/Area2D24"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D25" type="Area2D" parent="building nodes/ne_sw roads"]
+position = Vector2(314.545, 231.986)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/ne_sw roads/Area2D25"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D27" type="Area2D" parent="building nodes/ne_sw roads"]
+position = Vector2(394.545, 84.3585)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/ne_sw roads/Area2D27"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D26" type="Area2D" parent="building nodes/ne_sw roads"]
+position = Vector2(134.545, 233.743)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/ne_sw roads/Area2D26"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="nw_se roads" type="Node2D" parent="building nodes"]
+
+[node name="Area2D4" type="Area2D" parent="building nodes/nw_se roads"]
+position = Vector2(-132.727, -367.311)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/nw_se roads/Area2D4"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D5" type="Area2D" parent="building nodes/nw_se roads"]
+position = Vector2(43.6362, -367.311)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/nw_se roads/Area2D5"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D6" type="Area2D" parent="building nodes/nw_se roads"]
+position = Vector2(220, -367.311)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/nw_se roads/Area2D6"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D7" type="Area2D" parent="building nodes/nw_se roads"]
+position = Vector2(-221.818, -216.169)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/nw_se roads/Area2D7"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D8" type="Area2D" parent="building nodes/nw_se roads"]
+position = Vector2(-43.6362, -219.684)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/nw_se roads/Area2D8"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D9" type="Area2D" parent="building nodes/nw_se roads"]
+position = Vector2(132.727, -217.926)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/nw_se roads/Area2D9"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D10" type="Area2D" parent="building nodes/nw_se roads"]
+position = Vector2(309.091, -216.169)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/nw_se roads/Area2D10"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D11" type="Area2D" parent="building nodes/nw_se roads"]
+position = Vector2(-309.091, -66.7838)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/nw_se roads/Area2D11"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D12" type="Area2D" parent="building nodes/nw_se roads"]
+position = Vector2(-132.727, -66.7838)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/nw_se roads/Area2D12"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D13" type="Area2D" parent="building nodes/nw_se roads"]
+position = Vector2(43.6362, -66.7838)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/nw_se roads/Area2D13"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D14" type="Area2D" parent="building nodes/nw_se roads"]
+position = Vector2(221.818, -65.0264)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/nw_se roads/Area2D14"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D15" type="Area2D" parent="building nodes/nw_se roads"]
+position = Vector2(400, -63.2689)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/nw_se roads/Area2D15"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D16" type="Area2D" parent="building nodes/nw_se roads"]
+position = Vector2(-220, 86.116)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/nw_se roads/Area2D16"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D17" type="Area2D" parent="building nodes/nw_se roads"]
+position = Vector2(-43.6366, 87.8735)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/nw_se roads/Area2D17"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D18" type="Area2D" parent="building nodes/nw_se roads"]
+position = Vector2(309.091, 86.116)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/nw_se roads/Area2D18"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D19" type="Area2D" parent="building nodes/nw_se roads"]
+position = Vector2(-132.727, 235.501)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/nw_se roads/Area2D19"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D20" type="Area2D" parent="building nodes/nw_se roads"]
+position = Vector2(43.6362, 233.743)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/nw_se roads/Area2D20"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D21" type="Area2D" parent="building nodes/nw_se roads"]
+position = Vector2(221.818, 235.501)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/nw_se roads/Area2D21"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D22" type="Area2D" parent="building nodes/nw_se roads"]
+position = Vector2(134.545, 386.643)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/nw_se roads/Area2D22"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D23" type="Area2D" parent="building nodes/nw_se roads"]
+position = Vector2(-41.8182, 386.643)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/nw_se roads/Area2D23"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D24" type="Area2D" parent="building nodes/nw_se roads"]
+position = Vector2(-221.818, 386.643)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/nw_se roads/Area2D24"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D25" type="Area2D" parent="building nodes/nw_se roads"]
+position = Vector2(-310.909, 233.743)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/nw_se roads/Area2D25"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D35" type="Area2D" parent="building nodes/nw_se roads"]
+position = Vector2(-398.182, 86.116)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/nw_se roads/Area2D35"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D26" type="Area2D" parent="building nodes/nw_se roads"]
+position = Vector2(132.727, 84.3585)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/nw_se roads/Area2D26"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D27" type="Area2D" parent="building nodes/nw_se roads"]
+position = Vector2(221.818, 235.501)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/nw_se roads/Area2D27"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="straight roads" type="Node2D" parent="building nodes"]
+
+[node name="Area2D26" type="Area2D" parent="building nodes/straight roads"]
+position = Vector2(90.9091, 307.557)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/straight roads/Area2D26"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D5" type="Area2D" parent="building nodes/straight roads"]
+position = Vector2(-263.636, -295.255)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/straight roads/Area2D5"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D6" type="Area2D" parent="building nodes/straight roads"]
+position = Vector2(-87.2728, -295.255)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/straight roads/Area2D6"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D7" type="Area2D" parent="building nodes/straight roads"]
+position = Vector2(89.0907, -295.255)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/straight roads/Area2D7"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D8" type="Area2D" parent="building nodes/straight roads"]
+position = Vector2(-352.727, -144.113)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/straight roads/Area2D8"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D9" type="Area2D" parent="building nodes/straight roads"]
+position = Vector2(-174.545, -147.627)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/straight roads/Area2D9"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D10" type="Area2D" parent="building nodes/straight roads"]
+position = Vector2(1.81812, -145.87)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/straight roads/Area2D10"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D11" type="Area2D" parent="building nodes/straight roads"]
+position = Vector2(178.182, -144.113)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/straight roads/Area2D11"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D12" type="Area2D" parent="building nodes/straight roads"]
+position = Vector2(-440, 5.2724)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/straight roads/Area2D12"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D13" type="Area2D" parent="building nodes/straight roads"]
+position = Vector2(-263.636, 5.2724)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/straight roads/Area2D13"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D14" type="Area2D" parent="building nodes/straight roads"]
+position = Vector2(-87.2728, 5.2724)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/straight roads/Area2D14"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D15" type="Area2D" parent="building nodes/straight roads"]
+position = Vector2(90.9091, 7.02991)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/straight roads/Area2D15"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D16" type="Area2D" parent="building nodes/straight roads"]
+position = Vector2(269.091, 8.78735)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/straight roads/Area2D16"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D17" type="Area2D" parent="building nodes/straight roads"]
+position = Vector2(-350.909, 158.172)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/straight roads/Area2D17"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D18" type="Area2D" parent="building nodes/straight roads"]
+position = Vector2(-174.546, 159.93)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/straight roads/Area2D18"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D19" type="Area2D" parent="building nodes/straight roads"]
+position = Vector2(1.81812, 156.415)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/straight roads/Area2D19"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D20" type="Area2D" parent="building nodes/straight roads"]
+position = Vector2(178.182, 158.172)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/straight roads/Area2D20"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D21" type="Area2D" parent="building nodes/straight roads"]
+position = Vector2(-263.636, 307.557)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/straight roads/Area2D21"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D22" type="Area2D" parent="building nodes/straight roads"]
+position = Vector2(-87.2728, 305.8)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/straight roads/Area2D22"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D23" type="Area2D" parent="building nodes/straight roads"]
+position = Vector2(90.9091, 307.557)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/straight roads/Area2D23"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D24" type="Area2D" parent="building nodes/straight roads"]
+position = Vector2(267.273, 309.315)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/straight roads/Area2D24"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D25" type="Area2D" parent="building nodes/straight roads"]
+position = Vector2(354.545, 158.172)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/straight roads/Area2D25"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D29" type="Area2D" parent="building nodes/straight roads"]
+position = Vector2(443.636, 8.78735)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/straight roads/Area2D29"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D31" type="Area2D" parent="building nodes/straight roads"]
+position = Vector2(354.545, -142.355)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/straight roads/Area2D31"]
+shape = SubResource("CircleShape2D_4yx6r")
+
+[node name="Area2D33" type="Area2D" parent="building nodes/straight roads"]
+position = Vector2(265.454, -295.255)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="building nodes/straight roads/Area2D33"]
+shape = SubResource("CircleShape2D_4yx6r")

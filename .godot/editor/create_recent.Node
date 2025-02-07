@@ -1,7 +1,12 @@
+Button
+GridContainer
+Label
+CanvasGroup
 CollisionShape2D
 Area2D
+Sprite2D
+Node2D
 Control
 Node
-Label
 TileMapLayer
 ResourcePreloader
