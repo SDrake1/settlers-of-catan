@@ -1,6 +1,14 @@
+Panel
+Label
+VBoxContainer
+HBoxContainer
+CanvasGroup
+GridContainer
+PanelContainer
+Button
+TextureRect
+Sprite2D
+ResourcePreloader
 Control
 Node
-Label
 TileMapLayer
-Area2D
-ResourcePreloader

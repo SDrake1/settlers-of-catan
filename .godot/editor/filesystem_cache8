@@ -1,10 +1,29 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1737333703
-icon.svg::CompressedTexture2D::1233663219451541702::1737328568::1737328682::1::::<><>::
-tile-map-1.png::CompressedTexture2D::3877574182320799155::1737328568::1737328682::1::::<><>::
-tile-map-krita.png::CompressedTexture2D::5796398009588427414::1737328568::1737328682::1::::<><>::
-tile-map-rotated.png::CompressedTexture2D::1179028228967783311::1737328568::1737328682::1::::<><>::
-tile-map.png::CompressedTexture2D::3101193674040265330::1737328568::1737328682::1::::<><>::
-tiles.png::CompressedTexture2D::6174759413501288954::1737333703::1737333703::1::::<><>::
-tile_map_layer.gd::GDScript::-1::1737333528::0::1::::<>TileMapLayer<>::
-tile_map_layer.tscn::PackedScene::2014118747645869316::1737333529::0::1::::<><>::uid://bkgiha78hoa07::::res://tile-map.png<>uid://bvilcy1vgu3it::::res://tile-map-1.png<>uid://q2eomu0bkkg2::::res://tile-map-rotated.png<>res://tile_map_layer.gd<>uid://cpaibuqqoboey::::res://tiles.png
+::res://::1739064398
+icon.svg::CompressedTexture2D::1233663219451541702::1737198216::1737198228::1::::<><>::
+num_settlements.tres::Resource::-1::1739064398::0::1::::<><>::
+brick_button.gd::GDScript::-1::1739064398::0::1::::<>Button<>::
+brick_count.gd::GDScript::-1::1739064398::0::1::::<>Label<>::
+brick_counter.gd::GDScript::-1::1739064398::0::1::::<>VBoxContainer<>::
+cities_count.gd::GDScript::-1::1739064398::0::1::::<>Label<>::
+grid_container.gd::GDScript::-1::1739064398::0::1::::<>GridContainer<>::
+num_settlements.gd::GDScript::-1::1739064398::0::1::::<>Resource<>::
+ore_counter.gd::GDScript::-1::1739064398::0::1::::<>VBoxContainer<>::
+player_board.gd::GDScript::-1::1739064398::0::1::::<>Control<>::
+node_2d.tscn::PackedScene::2866009640398718170::1739064338::0::1::::<><>::res://Resource Icons.png<>res://brick_counter.gd<>res://brick_count.gd<>res://ore_counter.gd<>res://wool_counter.gd<>res://wheat_counter.gd<>res://wood_counter.gd
+player_board.tscn::PackedScene::7527363375964805951::1739064398::0::1::::<><>::res://brick_counter.gd<>res://player_board.gd<>res://Resource Icons.png<>res://vp_count.gd<>res://town_count.gd<>res://brick_count.gd<>res://wood_counter.gd<>res://road_count.gd<>res://cities_count.gd<>res://wheat_counter.gd<>res://ore_counter.gd<>res://wool_counter.gd
+player_board_v2.tscn::PackedScene::402457698577175718::1739064339::0::1::::<><>::res://brick_counter.gd<>res://Resource Icons.png<>res://brick_count.gd<>res://wood_counter.gd<>res://wheat_counter.gd<>res://ore_counter.gd<>res://wool_counter.gd
+Resource Icons.png::CompressedTexture2D::1712805272115003079::1739064398::1739064825::1::::<><>::
+tiles.png::CompressedTexture2D::4453981966487704692::1739064387::1739064825::1::::<><>::
+tile_map_layer.tscn::PackedScene::8688365308680123333::1739064398::0::1::::<><>::res://tile_map_layer.gd<>res://tiles.png
+wool_counter.gd::GDScript::-1::1739064398::0::1::::<>VBoxContainer<>::
+wood_counter.gd::GDScript::-1::1739064398::0::1::::<>VBoxContainer<>::
+wheat_counter.gd::GDScript::-1::1739064398::0::1::::<>VBoxContainer<>::
+vp_count.gd::GDScript::-1::1739064398::0::1::::<>Label<>::
+town_count.gd::GDScript::-1::1739064398::0::1::::<>Label<>::
+tile_map_layer.gd::GDScript::-1::1739064387::0::1::::<>TileMapLayer<>::
+road_count.gd::GDScript::-1::1739064398::0::1::::<>Label<>::
+resource_preloader.gd::GDScript::-1::1739064398::0::1::::<>ResourcePreloader<>::
+::res://addons/::1737313134
+::res://addons/godot-git-plugin/::1737336647
+::res://addons/godot-git-plugin/win64/::1737389422
