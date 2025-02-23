@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfjm438k6j135"]
+
+[ext_resource type="Script" path="res://Dice.gd" id="1_6uh0t"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 65.0
+offset_bottom = 64.0
+script = ExtResource("1_6uh0t")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 65.0
+offset_bottom = 64.0
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
