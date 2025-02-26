@@ -1,8 +1,8 @@
+VBoxContainer
 ColorRect
 CanvasGroup
 Node2D
 GridContainer
-VBoxContainer
 ResourcePreloader
 Button
 Label

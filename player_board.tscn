@@ -24,13 +24,14 @@ atlas = ExtResource("2_d7p5t")
 region = Rect2(213.525, 2.00599, 63.7261, 63.4365)
 
 [node name="PlayerBoard" type="Control"]
+custom_minimum_size = Vector2(-0.01, 0)
 layout_mode = 3
 anchor_right = 0.22
 anchor_bottom = 0.236
 offset_right = -253.44
 offset_bottom = -152.928
 grow_horizontal = 2
-scale = Vector2(0.720001, 0.76)
+scale = Vector2(1.335, 1.335)
 size_flags_horizontal = 3
 size_flags_vertical = 2
 
@@ -38,16 +39,17 @@ size_flags_vertical = 2
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-scale = Vector2(5.27777, 2.98133)
+scale = Vector2(12.653, 7.147)
 
 [node name="Board" type="Panel" parent="."]
 unique_name_in_owner = true
 layout_direction = 2
-offset_left = 1.06209
-offset_top = 1.0728
-offset_right = 254.062
-offset_bottom = 154.073
-scale = Vector2(0.833333, 0.783393)
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 253.0
+offset_bottom = 152.0
+scale = Vector2(2.003, 1.882)
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_ssfaf")
