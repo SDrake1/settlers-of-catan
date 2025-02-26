@@ -13,11 +13,19 @@ var player_name: String
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	%PlayerName.text = player_name
-
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	%VPCount.text = str(victory_points)
+	%TownCount.text = str(num_towns)
+	%RoadCount.text = str(num_roads)
+	%CitiesCount.text = str(num_cities)
+	%BrickCount.text = str(num_brick)
+	%WoodCount.text = str(num_wood)
+	%WheatCount.text = str(num_wheat)
+	%OreCount.text = str(num_ore)
+	%WoolCount.text = str(num_wool)
 	
 func build_town():
 	if num_towns < 5 and num_brick >= 1 and num_wheat >= 1 and num_wood >= 1 and num_wool >= 1:
