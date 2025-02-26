@@ -1,4 +1,8 @@
-res://Scenes/tile_map_layer.tscn
-res://Scenes/Building.tscn
-res://Scenes/turn_tracker.gd
-res://Scripts/building_nodes.gd
+res://tile_map_layer.tscn
+res://player_board.tscn
+res://tile_map_layer.gd
+res://quest.tscn
+res://player_board.gd
+res://player_data.gd
+res://quest.gd
+res://game_board.tscn

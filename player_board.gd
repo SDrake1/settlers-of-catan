@@ -8,10 +8,11 @@ var num_ore: int
 var num_brick: int
 var num_wheat: int
 var victory_points: int
+var player_name: String
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	%PlayerName.text = player_name
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
