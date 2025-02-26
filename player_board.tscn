@@ -1,17 +1,7 @@
-[gd_scene load_steps=18 format=3 uid="uid://dfikts0no6d1h"]
+[gd_scene load_steps=8 format=3 uid="uid://dfikts0no6d1h"]
 
-[ext_resource type="Script" path="res://brick_counter.gd" id="1_1pc83"]
 [ext_resource type="Script" path="res://player_board.gd" id="1_ssfaf"]
 [ext_resource type="Texture2D" uid="uid://ynxwgnkrhgdb" path="res://Resource Icons.png" id="2_d7p5t"]
-[ext_resource type="Script" path="res://vp_count.gd" id="2_eaqo8"]
-[ext_resource type="Script" path="res://town_count.gd" id="3_2siks"]
-[ext_resource type="Script" path="res://brick_count.gd" id="3_60ipw"]
-[ext_resource type="Script" path="res://wood_counter.gd" id="4_8kmn5"]
-[ext_resource type="Script" path="res://road_count.gd" id="4_rguhh"]
-[ext_resource type="Script" path="res://cities_count.gd" id="5_kit5e"]
-[ext_resource type="Script" path="res://wheat_counter.gd" id="5_nw2s3"]
-[ext_resource type="Script" path="res://ore_counter.gd" id="6_q63se"]
-[ext_resource type="Script" path="res://wool_counter.gd" id="7_sjrbb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5sag6"]
 atlas = ExtResource("2_d7p5t")
@@ -43,10 +33,15 @@ grow_horizontal = 2
 scale = Vector2(0.720001, 0.76)
 size_flags_horizontal = 3
 size_flags_vertical = 2
-script = ExtResource("1_ssfaf")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(5.27777, 2.98133)
 
 [node name="Board" type="Panel" parent="."]
-self_modulate = Color(0.543614, 0.071234, 0.368327, 1)
+unique_name_in_owner = true
 layout_direction = 2
 offset_left = 1.06209
 offset_top = 1.0728
@@ -55,6 +50,7 @@ offset_bottom = 154.073
 scale = Vector2(0.833333, 0.783393)
 size_flags_horizontal = 3
 size_flags_vertical = 3
+script = ExtResource("1_ssfaf")
 
 [node name="PlayerName" type="Label" parent="Board"]
 unique_name_in_owner = true
@@ -80,9 +76,9 @@ text = "VP"
 horizontal_alignment = 1
 
 [node name="VPCount" type="Label" parent="Board/VictoryPoints"]
+unique_name_in_owner = true
 layout_mode = 2
 horizontal_alignment = 1
-script = ExtResource("2_eaqo8")
 
 [node name="Buildings" type="HBoxContainer" parent="Board"]
 layout_mode = 1
@@ -104,9 +100,9 @@ layout_mode = 2
 text = "Towns"
 
 [node name="TownCount" type="Label" parent="Board/Buildings/Towns"]
+unique_name_in_owner = true
 layout_mode = 2
 horizontal_alignment = 1
-script = ExtResource("3_2siks")
 
 [node name="Roads" type="VBoxContainer" parent="Board/Buildings"]
 layout_mode = 2
@@ -116,9 +112,9 @@ layout_mode = 2
 text = "Roads"
 
 [node name="RoadCount" type="Label" parent="Board/Buildings/Roads"]
+unique_name_in_owner = true
 layout_mode = 2
 horizontal_alignment = 1
-script = ExtResource("4_rguhh")
 
 [node name="Cities" type="VBoxContainer" parent="Board/Buildings"]
 layout_mode = 2
@@ -128,9 +124,9 @@ layout_mode = 2
 text = "Cities"
 
 [node name="CitiesCount" type="Label" parent="Board/Buildings/Cities"]
+unique_name_in_owner = true
 layout_mode = 2
 horizontal_alignment = 1
-script = ExtResource("5_kit5e")
 
 [node name="Resources" type="HBoxContainer" parent="Board"]
 layout_mode = 1
@@ -151,7 +147,6 @@ layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 10
 alignment = 1
-script = ExtResource("1_1pc83")
 
 [node name="BrickIcon" type="TextureRect" parent="Board/Resources/Brick"]
 layout_mode = 2
@@ -161,18 +156,17 @@ texture = SubResource("AtlasTexture_5sag6")
 stretch_mode = 3
 
 [node name="BrickCount" type="Label" parent="Board/Resources/Brick"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 10
 horizontal_alignment = 1
 vertical_alignment = 1
-script = ExtResource("3_60ipw")
 
 [node name="Wood" type="VBoxContainer" parent="Board/Resources"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 10
-script = ExtResource("4_8kmn5")
 
 [node name="WoodIcon" type="TextureRect" parent="Board/Resources/Wood"]
 layout_mode = 2
@@ -182,18 +176,17 @@ texture = SubResource("AtlasTexture_4anf7")
 stretch_mode = 3
 
 [node name="WoodCount" type="Label" parent="Board/Resources/Wood"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 10
 horizontal_alignment = 1
 vertical_alignment = 1
-script = ExtResource("3_60ipw")
 
 [node name="Wheat" type="VBoxContainer" parent="Board/Resources"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 10
-script = ExtResource("5_nw2s3")
 
 [node name="WheatIcon" type="TextureRect" parent="Board/Resources/Wheat"]
 layout_mode = 2
@@ -203,19 +196,18 @@ texture = SubResource("AtlasTexture_dyb6e")
 stretch_mode = 3
 
 [node name="WheatCount" type="Label" parent="Board/Resources/Wheat"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 10
 horizontal_alignment = 1
 vertical_alignment = 1
-script = ExtResource("3_60ipw")
 
 [node name="Ore" type="VBoxContainer" parent="Board/Resources"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 10
 alignment = 1
-script = ExtResource("6_q63se")
 
 [node name="OreIcon" type="TextureRect" parent="Board/Resources/Ore"]
 layout_mode = 2
@@ -225,19 +217,18 @@ texture = SubResource("AtlasTexture_ippt5")
 stretch_mode = 3
 
 [node name="OreCount" type="Label" parent="Board/Resources/Ore"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 10
 horizontal_alignment = 1
 vertical_alignment = 1
-script = ExtResource("3_60ipw")
 
 [node name="Wool" type="VBoxContainer" parent="Board/Resources"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 10
 alignment = 1
-script = ExtResource("7_sjrbb")
 
 [node name="WoolIcon" type="TextureRect" parent="Board/Resources/Wool"]
 layout_mode = 2
@@ -247,9 +238,9 @@ texture = SubResource("AtlasTexture_qu2mj")
 stretch_mode = 3
 
 [node name="WoolCount" type="Label" parent="Board/Resources/Wool"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 10
 horizontal_alignment = 1
 vertical_alignment = 1
-script = ExtResource("3_60ipw")

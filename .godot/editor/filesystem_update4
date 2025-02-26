@@ -6,3 +6,15 @@ res://player_board.gd
 res://player_data.gd
 res://quest.gd
 res://game_board.tscn
+res://brick_button.gd
+res://brick_count.gd
+res://brick_counter.gd
+res://cities_count.gd
+res://num_settlements.gd
+res://ore_counter.gd
+res://road_count.gd
+res://town_count.gd
+res://vp_count.gd
+res://wheat_counter.gd
+res://wood_counter.gd
+res://wool_counter.gd

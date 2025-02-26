@@ -1,21 +1,23 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1740438100
+::res://::1740609481
 brick_button.gd::GDScript::-1::1739375687::0::1::::<>Button<>::
 brick_count.gd::GDScript::-1::1739375687::0::1::::<>Label<>::
 brick_counter.gd::GDScript::-1::1739375687::0::1::::<>VBoxContainer<>::
 cities_count.gd::GDScript::-1::1739375687::0::1::::<>Label<>::
+Dice.gd::GDScript::-1::1740609469::0::1::::<>Control<>::
+Dice.tscn::PackedScene::-1::1740609469::0::1::::<><>::
+game_board.tscn::PackedScene::6409922037994982106::1740530271::0::1::::<><>::res://tile_map_layer.gd<>uid://bcc87fyvktv30::::res://Assets/tiles.png
 icon.svg::CompressedTexture2D::1233663219451541702::1737198216::1739376561::1::::<><>::
 num_settlements.gd::GDScript::-1::1739375687::0::1::::<>Resource<>::
 ore_counter.gd::GDScript::-1::1739375687::0::1::::<>VBoxContainer<>::
-player_board.gd::GDScript::-1::1739375687::0::1::::<>Control<>::
-player_board.tscn::PackedScene::7527363375964805951::1740436794::0::1::::<><>::res://brick_counter.gd<>res://player_board.gd<>uid://ynxwgnkrhgdb::::res://Resource Icons.png<>res://vp_count.gd<>res://town_count.gd<>res://brick_count.gd<>res://wood_counter.gd<>res://road_count.gd<>res://cities_count.gd<>res://wheat_counter.gd<>res://ore_counter.gd<>res://wool_counter.gd
-quest.gd::GDScript::-1::1739376556::0::1::::<>Control<>::
-quest.tscn::PackedScene::8503994437147671110::1740436794::0::1::::<><>::res://quest.gd
-player_data.gd::GDScript::-1::1740438099::0::1::::<>Node<>::
+player_board.gd::GDScript::-1::1740609481::0::1::::<>Control<>::
+player_board.tscn::PackedScene::7527363375964805951::1740609481::0::1::::<><>::res://brick_counter.gd<>res://player_board.gd<>uid://ynxwgnkrhgdb::::res://Resource Icons.png<>res://vp_count.gd<>res://town_count.gd<>res://brick_count.gd<>res://wood_counter.gd<>res://road_count.gd<>res://cities_count.gd<>res://wheat_counter.gd<>res://ore_counter.gd<>res://wool_counter.gd
+player_data.gd::GDScript::-1::1740609481::0::1::::<>Node<>::
+quest.gd::GDScript::-1::1740609481::0::1::::<>Control<>::
+quest.tscn::PackedScene::8503994437147671110::1740529982::0::1::::<><>::res://quest.gd
 Resource Icons.png::CompressedTexture2D::1712805272115003079::1739375687::1739376561::1::::<><>::
 road_count.gd::GDScript::-1::1739375687::0::1::::<>Label<>::
-tile_map_layer.gd::GDScript::-1::1740436708::0::1::::<>TileMapLayer<>::
-tile_map_layer.tscn::PackedScene::6409922037994982106::1740436794::0::1::::<><>::res://tile_map_layer.gd<>uid://bcc87fyvktv30::::res://Assets/tiles.png
+tile_map_layer.gd::GDScript::-1::1740609481::0::1::::<>TileMapLayer<>::
 town_count.gd::GDScript::-1::1739375687::0::1::::<>Label<>::
 vp_count.gd::GDScript::-1::1739375687::0::1::::<>Label<>::
 wheat_counter.gd::GDScript::-1::1739375687::0::1::::<>VBoxContainer<>::
@@ -31,6 +33,13 @@ dot.png::CompressedTexture2D::4599763569059744489::1739376556::1739376561::1::::
 settlement.png::CompressedTexture2D::3011183577494652486::1739376556::1739376561::1::::<><>::
 street.png::CompressedTexture2D::2982147312251755790::1739376556::1739376561::1::::<><>::
 tiles.png::CompressedTexture2D::2532988233303871357::1739376556::1739376561::1::::<><>::
+::res://Dice/::1740609469
+Dice1.png::CompressedTexture2D::7019429650593259325::1740609469::1740609504::1::::<><>::
+Dice2.png::CompressedTexture2D::3744354017237343726::1740609469::1740609504::1::::<><>::
+Dice3.png::CompressedTexture2D::3054143259044255824::1740609469::1740609504::1::::<><>::
+Dice4.png::CompressedTexture2D::2355201444577965020::1740609469::1740609504::1::::<><>::
+Dice5.png::CompressedTexture2D::1439338426473283891::1740609469::1740609504::1::::<><>::
+Dice6.png::CompressedTexture2D::5283610786287133186::1740609469::1740609504::1::::<><>::
 ::res://Scenes/::1739376556
 Building.tscn::PackedScene::6085912716105659047::1739376556::0::1::::<><>::uid://bi5v0ve1vvaxa::::res://Assets/settlement.png
 tile_map_layer.tscn::PackedScene::2014118747645869316::1739376556::0::1::::<><>::uid://ct8dndrvrvuic::::res://Assets/tiles.png<>res://Scripts/tile_map_layer.gd<>uid://x8b7wmmemhbw::::res://Assets/big_circle.png<>res://Scripts/building_nodes.gd<>res://Scenes/turn_tracker.gd

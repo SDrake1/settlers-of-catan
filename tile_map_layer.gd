@@ -46,9 +46,8 @@ func _ready() -> void:
 	
 	for p_name in PlayerData.player_names:
 		var player_board = player_board_scene.instantiate()
-		player_board.name = p_name
-		player_board.player_name = p_name
-		player_board.size_flags_horizontal = 4
+		player_board.get_child(1).name = p_name
+		player_board.get_child(1).player_name = p_name
 		%PlayerBoards.add_child(player_board)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
