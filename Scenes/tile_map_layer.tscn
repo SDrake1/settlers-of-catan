@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Scripts/tile_map_layer.gd" id="2_l5p4e"]
 [ext_resource type="Texture2D" uid="uid://x8b7wmmemhbw" path="res://Assets/big_circle.png" id="3_ayq6f"]
 [ext_resource type="Script" path="res://Scripts/building_nodes.gd" id="4_10npc"]
-[ext_resource type="Script" path="res://Scenes/turn_tracker.gd" id="5_kc7j2"]
+[ext_resource type="Script" path="res://Scripts/turn_tracker.gd" id="5_kc7j2"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ag1qo"]
 
@@ -1258,6 +1258,18 @@ offset_right = 1854.09
 offset_bottom = 1086.09
 theme_override_font_sizes/font_size = 36
 text = "End Turn"
+
+[node name="LinkButton" type="LinkButton" parent="CanvasGroup/Button"]
+layout_direction = 1
+layout_mode = 0
+offset_left = -1154.54
+offset_top = -975.396
+offset_right = -1017.54
+offset_bottom = -902.396
+theme_override_font_sizes/font_size = 40
+text = "Rules"
+underline = 1
+uri = "https://www.catan.com/sites/default/files/2021-06/catan_base_rules_2020_200707.pdf"
 
 [node name="current_turn" type="Label" parent="CanvasGroup"]
 unique_name_in_owner = true

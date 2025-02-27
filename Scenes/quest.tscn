@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dtfnstdi3f8es"]
 
-[ext_resource type="Script" path="res://quest.gd" id="1_xpkxq"]
+[ext_resource type="Script" path="res://Scripts/quest.gd" id="1_e1bht"]
 
 [sub_resource type="Theme" id="Theme_sr7bl"]
 
@@ -12,7 +12,7 @@ offset_top = 271.0
 offset_right = 720.0
 offset_bottom = 467.0
 theme = SubResource("Theme_sr7bl")
-script = ExtResource("1_xpkxq")
+script = ExtResource("1_e1bht")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1

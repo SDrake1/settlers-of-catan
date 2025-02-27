@@ -1,26 +1,26 @@
 [gd_scene load_steps=8 format=3 uid="uid://dfikts0no6d1h"]
 
-[ext_resource type="Script" path="res://player_board.gd" id="1_ssfaf"]
-[ext_resource type="Texture2D" uid="uid://ynxwgnkrhgdb" path="res://Resource Icons.png" id="2_d7p5t"]
+[ext_resource type="Script" path="res://Scripts/player_board.gd" id="1_esncm"]
+[ext_resource type="Texture2D" uid="uid://ynxwgnkrhgdb" path="res://Assets/Resource Icons.png" id="2_hfps7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5sag6"]
-atlas = ExtResource("2_d7p5t")
+atlas = ExtResource("2_hfps7")
 region = Rect2(71, 3, 63, 63)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4anf7"]
-atlas = ExtResource("2_d7p5t")
+atlas = ExtResource("2_hfps7")
 region = Rect2(284.782, 2.58532, 62.5675, 62.5675)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dyb6e"]
-atlas = ExtResource("2_d7p5t")
+atlas = ExtResource("2_hfps7")
 region = Rect2(1.28007, 2.71632, 61.9882, 62.8572)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ippt5"]
-atlas = ExtResource("2_d7p5t")
+atlas = ExtResource("2_hfps7")
 region = Rect2(141.544, 2, 63.4365, 63.9618)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qu2mj"]
-atlas = ExtResource("2_d7p5t")
+atlas = ExtResource("2_hfps7")
 region = Rect2(213.525, 2.00599, 63.7261, 63.4365)
 
 [node name="PlayerBoard" type="Control"]
@@ -52,7 +52,7 @@ offset_bottom = 152.0
 scale = Vector2(2.003, 1.882)
 size_flags_horizontal = 3
 size_flags_vertical = 3
-script = ExtResource("1_ssfaf")
+script = ExtResource("1_esncm")
 
 [node name="PlayerName" type="Label" parent="Board"]
 unique_name_in_owner = true

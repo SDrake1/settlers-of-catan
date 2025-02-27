@@ -5,7 +5,7 @@ var game_board = [Vector2i(4,1), Vector2i(5,1), Vector2i(6,1),
 		Vector2i(3,3), Vector2i(4,3), Vector2i(5,3), Vector2i(6,3), Vector2i(7,3),
 		Vector2i(4,4), Vector2i(5,4), Vector2i(6,4), Vector2i(7,4),
 		Vector2i(4,5), Vector2i(5,5), Vector2i(6,5)]
-var player_board_scene = preload("res://player_board.tscn")
+var player_board_scene = preload("res://Scenes/player_board.tscn")
 func rand_tile(n: int) -> String:
 	var tile_types = ["ocean", "mountains", "desert", "fields", "hills", "forest", "pasture"]
 	return tile_types[n]
@@ -42,7 +42,7 @@ func _ready() -> void:
 		set_cell(cell, atlas_id, Vector2i(rand, 0))
 		
 	resource_numbers()
-	for p_name in PlayerData.player_names:
+	for p_name in Global.players:
 		var player_board = player_board_scene.instantiate()
 		player_board.get_child(1).name = p_name
 		player_board.get_child(1).player_name = p_name

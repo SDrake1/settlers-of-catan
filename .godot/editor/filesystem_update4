@@ -1,5 +1,8 @@
-res://player_board.tscn
-res://tile_map_layer.gd
-res://game_board.tscn
-res://quest.tscn
+res://Scenes/quest.tscn
+res://Scenes/player_board.tscn
 res://Scenes/tile_map_layer.tscn
+res://Scripts/tile_map_layer.gd
+res://game_board.tscn
+res://Scripts/turn_tracker.gd
+res://Scenes/Building.tscn
+res://Scenes/Dice.tscn

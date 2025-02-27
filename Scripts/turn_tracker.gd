@@ -30,7 +30,7 @@ func _on_button_button_up() -> void:
 			change_text()
 		else:
 			Global.round += 1
-			Global.current_player == 0
+			Global.current_player = 0
 			change_text()
 			
 func change_text():

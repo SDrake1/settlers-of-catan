@@ -17,7 +17,7 @@ func _ready() -> void:
 	
 func _on_button_2_pressed() -> void:
 	buttoncheck = 2
-	PlayerData.player_count = 2
+	
 	text.text = "Submit 2 names"
 	Submit.visible = true
 	NameText.visible = true
@@ -28,7 +28,7 @@ func _on_button_2_pressed() -> void:
 
 func _on_button_3_pressed() -> void:
 	buttoncheck = 3
-	PlayerData.player_count = 3
+	
 	text.text = "Submit 3 names"
 	Submit.visible = true
 	NameText.visible = true
@@ -39,7 +39,7 @@ func _on_button_3_pressed() -> void:
 
 func _on_button_4_pressed() -> void:
 	buttoncheck = 4
-	PlayerData.player_count = 4
+	
 	text.text = "Submit 4 names"
 	Submit.visible = true
 	NameText.visible = true
@@ -56,7 +56,7 @@ func _on_submit_pressed() -> void:
 			text.text = "That name has already been used."
 			return 
 	input.append(NameText.text)
-	PlayerData.player_names.append(NameText.text)
+	Global.players.append(NameText.text)
 	# Clear the input field 
 	NameText.clear()
 	print("Input has added",input)	
