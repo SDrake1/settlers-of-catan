@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dtfnstdi3f8es"]
+[gd_scene load_steps=4 format=3 uid="uid://dtfnstdi3f8es"]
 
 [ext_resource type="Script" path="res://Scripts/quest.gd" id="1_e1bht"]
+[ext_resource type="Texture2D" uid="uid://dndfibmb51q0m" path="res://catan-logo.png" id="2_j4ys4"]
 
 [sub_resource type="Theme" id="Theme_sr7bl"]
 
@@ -94,6 +95,13 @@ offset_top = 144.0
 offset_right = 246.0
 offset_bottom = 179.0
 text = "Submit"
+
+[node name="Catan-logo" type="Sprite2D" parent="."]
+position = Vector2(121, -134)
+scale = Vector2(1.16947, 1.16947)
+texture = ExtResource("2_j4ys4")
+region_enabled = true
+region_rect = Rect2(0, 0, 576, 215)
 
 [connection signal="pressed" from="HBoxContainer/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="HBoxContainer/Button3" to="." method="_on_button_3_pressed"]

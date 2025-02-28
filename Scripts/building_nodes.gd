@@ -39,43 +39,81 @@ func _input(event: InputEvent) -> void:
 			match parent.name:
 				"buildings":
 					if !selected.get_node("Building"):
-						#create instance of building
-						var new_building = settlement_scene.instantiate()
-						new_building.modulate = Global.player_colors[Global.current_player]
-						selected.add_child(new_building)
-						
-						#do building logic
-						#if first or second turn, players must build one settlement and one road off of it
-						#every other turn after that, settlements must be touching a road of same color
-						#settlements cannot be built if there is another building one road away 
-						
-					elif selected.get_node("Building").texture == settlement_img:
-						selected.get_node("Building").texture = city_img
+						if Global.round >= 3 && %PlayerBoards.get_child(Global.current_player).get_child(1).build_town():
+							settlement()
+							
+						elif Global.round == 1 && Global.beginning_check[Global.current_player][0] == 0:
+							settlement()
+							Global.beginning_check[Global.current_player][0] = 1
+							%PlayerBoards.get_child(Global.current_player).get_child(1).victory_points += 1
+							%turn_track.round_1()
+							
+						elif Global.round == 2 && Global.beginning_check[Global.current_player][2] == 0:
+							settlement()
+							Global.beginning_check[Global.current_player][2] = 1
+							%PlayerBoards.get_child(Global.current_player).get_child(1).victory_points += 1
+							%turn_track.round_2()
+							
+					elif selected.get_node("Building").texture == settlement_img && selected.get_node("Building").modulate == Global.player_colors[Global.current_player]:
+						if %PlayerBoards.get_child(Global.current_player).get_child(1).build_city():
+							selected.get_node("Building").texture = city_img
 						
 					else:
 						pass
 						
-				#only build if touching settlement, city, or another road of the same color
+				#build road based on rotation
 				"ne_sw roads":
-					var road = Sprite2D.new()
-					road.texture = road_img
-					road.scale = Vector2(1.1, 1.1)
-					road.rotation = deg_to_rad(-33)
-					road.modulate = Global.player_colors[Global.current_player]
-					selected.add_child(road)
+					if Global.round >= 3 && %PlayerBoards.get_child(Global.current_player).get_child(1).build_road():
+						road(-33)
+						
+					elif Global.round == 1 && Global.beginning_check[Global.current_player][1] == 0:
+						road(-33)
+						Global.beginning_check[Global.current_player][1] = 1
+						%turn_track.round_1()
+						
+					elif Global.round == 2 && Global.beginning_check[Global.current_player][3] == 0:
+						road(-33)
+						Global.beginning_check[Global.current_player][3] = 1
+						%turn_track.round_2()
 					
 				"nw_se roads":
-					var road = Sprite2D.new()
-					road.texture = road_img
-					road.scale = Vector2(1.1, 1.1)
-					road.rotation = deg_to_rad(33)
-					road.modulate = Global.player_colors[Global.current_player]
-					selected.add_child(road)
+					if Global.round >= 3 && %PlayerBoards.get_child(Global.current_player).get_child(1).build_road():
+						road(33)
+					
+					elif Global.round == 1 && Global.beginning_check[Global.current_player][1] == 0:
+						road(33)
+						Global.beginning_check[Global.current_player][1] = 1
+						%turn_track.round_1()
+						
+					elif Global.round == 2 && Global.beginning_check[Global.current_player][3] == 0:
+						road(33)
+						Global.beginning_check[Global.current_player][3] = 1
+						%turn_track.round_2()
 					
 				"straight roads":
-					var road = Sprite2D.new()
-					road.texture = road_img
-					road.scale = Vector2(1.1, 1.1)
-					road.rotation = deg_to_rad(90)
-					road.modulate = Global.player_colors[Global.current_player]
-					selected.add_child(road)
+					if Global.round >= 3 && %PlayerBoards.get_child(Global.current_player).get_child(1).build_road():
+						road(90)
+					
+					elif Global.round == 1 && Global.beginning_check[Global.current_player][1] == 0:
+						road(90)
+						Global.beginning_check[Global.current_player][1] = 1
+						%turn_track.round_1()
+						
+					elif Global.round == 2 && Global.beginning_check[Global.current_player][3] == 0:
+						road(90)
+						Global.beginning_check[Global.current_player][3] = 1
+						%turn_track.round_2()
+
+func road(rot):
+	var road = Sprite2D.new()
+	road.texture = road_img
+	road.scale = Vector2(1.1, 1.1)
+	road.rotation = deg_to_rad(rot)
+	road.modulate = Global.player_colors[Global.current_player]
+	selected.add_child(road)
+	
+func settlement():
+	#create instance of building
+	var new_building = settlement_scene.instantiate()
+	new_building.modulate = Global.player_colors[Global.current_player]
+	selected.add_child(new_building)

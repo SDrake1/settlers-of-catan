@@ -1,22 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://bfjm438k6j135"]
+[gd_scene load_steps=2 format=3 uid="uid://bfjm438k6j135"]
 
 [ext_resource type="Script" path="res://Scripts/Dice.gd" id="1_6uh0t"]
-[ext_resource type="Texture2D" uid="uid://c7ai8l2easgvl" path="res://Dice/Dice1.png" id="2_5l6yr"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 65.0
 offset_bottom = 64.0
-scale = Vector2(0.5, 0.5)
 script = ExtResource("1_6uh0t")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureButton" type="TextureButton" parent="."]
 layout_mode = 0
 offset_right = 65.0
 offset_bottom = 64.0
-texture = ExtResource("2_5l6yr")
 
 [node name="Timer" type="Timer" parent="."]
 
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

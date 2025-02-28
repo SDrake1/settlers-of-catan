@@ -1,10 +1,13 @@
-[gd_scene load_steps=17 format=4 uid="uid://3xwihgg5m45u"]
+[gd_scene load_steps=20 format=4 uid="uid://3xwihgg5m45u"]
 
 [ext_resource type="Texture2D" uid="uid://bcc87fyvktv30" path="res://Assets/tiles.png" id="1_6r8as"]
 [ext_resource type="Script" path="res://Scripts/tile_map_layer.gd" id="2_l5p4e"]
 [ext_resource type="Texture2D" uid="uid://x8b7wmmemhbw" path="res://Assets/big_circle.png" id="3_ayq6f"]
 [ext_resource type="Script" path="res://Scripts/building_nodes.gd" id="4_10npc"]
 [ext_resource type="Script" path="res://Scripts/turn_tracker.gd" id="5_kc7j2"]
+[ext_resource type="PackedScene" uid="uid://bfjm438k6j135" path="res://Scenes/Dice.tscn" id="6_43nmn"]
+[ext_resource type="Script" path="res://Scripts/die_button.gd" id="6_gpigw"]
+[ext_resource type="Texture2D" uid="uid://c7jeqsr48gjmr" path="res://Assets/buildingcosts.png" id="8_160g5"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ag1qo"]
 
@@ -1248,39 +1251,77 @@ position = Vector2(752.727, 325.132)
 scale = Vector2(1.1, 1.1)
 texture = ExtResource("3_ayq6f")
 
-[node name="CanvasGroup" type="CanvasGroup" parent="."]
+[node name="turn_track" type="CanvasGroup" parent="."]
+unique_name_in_owner = true
 script = ExtResource("5_kc7j2")
 
-[node name="Button" type="Button" parent="CanvasGroup"]
-offset_left = 1649.09
-offset_top = 1021.09
-offset_right = 1854.09
-offset_bottom = 1086.09
-theme_override_font_sizes/font_size = 36
-text = "End Turn"
+[node name="special_text" type="Label" parent="turn_track"]
+unique_name_in_owner = true
+offset_left = 651.0
+offset_top = 47.0
+offset_right = 1482.0
+offset_bottom = 137.0
+theme_override_font_sizes/font_size = 48
+text = "Build a settlement and road"
+horizontal_alignment = 1
 
-[node name="LinkButton" type="LinkButton" parent="CanvasGroup/Button"]
+[node name="LinkButton" type="LinkButton" parent="turn_track"]
 layout_direction = 1
-layout_mode = 0
-offset_left = -1154.54
-offset_top = -975.396
-offset_right = -1017.54
-offset_bottom = -902.396
+offset_left = 1767.27
+offset_top = 298.77
+offset_right = 1904.27
+offset_bottom = 371.769
+theme_override_colors/font_color = Color(0.421857, 0.733834, 0.871962, 1)
 theme_override_font_sizes/font_size = 40
 text = "Rules"
 underline = 1
 uri = "https://www.catan.com/sites/default/files/2021-06/catan_base_rules_2020_200707.pdf"
 
-[node name="current_turn" type="Label" parent="CanvasGroup"]
+[node name="end_turn" type="Button" parent="turn_track"]
 unique_name_in_owner = true
-offset_left = 1565.45
-offset_top = 954.306
-offset_right = 1936.45
-offset_bottom = 1009.31
+offset_left = 1641.82
+offset_top = 1015.82
+offset_right = 1846.82
+offset_bottom = 1080.82
+theme_override_font_sizes/font_size = 36
+disabled = true
+text = "End Turn"
+
+[node name="current_turn" type="Label" parent="turn_track"]
+unique_name_in_owner = true
+offset_left = 1560.0
+offset_top = 945.518
+offset_right = 1931.0
+offset_bottom = 1000.52
 theme_override_font_sizes/font_size = 40
 text = "player's turn"
 horizontal_alignment = 1
 vertical_alignment = 2
+
+[node name="die_button" type="Button" parent="turn_track"]
+unique_name_in_owner = true
+offset_left = 1653.0
+offset_top = 683.0
+offset_right = 1860.0
+offset_bottom = 748.0
+theme_override_font_sizes/font_size = 36
+disabled = true
+text = "Roll Dice"
+script = ExtResource("6_gpigw")
+
+[node name="die1" parent="turn_track/die_button" instance=ExtResource("6_43nmn")]
+unique_name_in_owner = true
+offset_left = -14.8182
+offset_top = 79.7416
+offset_right = 50.1818
+offset_bottom = 143.742
+
+[node name="die2" parent="turn_track/die_button" instance=ExtResource("6_43nmn")]
+unique_name_in_owner = true
+offset_left = 117.909
+offset_top = 79.7416
+offset_right = 182.909
+offset_bottom = 143.742
 
 [node name="PlayerBoards" type="VBoxContainer" parent="."]
 unique_name_in_owner = true
@@ -1291,4 +1332,10 @@ offset_bottom = 1116.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[connection signal="button_up" from="CanvasGroup/Button" to="CanvasGroup" method="_on_button_button_up"]
+[node name="Buildingcosts" type="Sprite2D" parent="."]
+position = Vector2(1709.09, 149.385)
+scale = Vector2(1.17487, 1.17487)
+texture = ExtResource("8_160g5")
+
+[connection signal="button_up" from="turn_track/end_turn" to="turn_track" method="_on_button_button_up"]
+[connection signal="button_up" from="turn_track/die_button" to="turn_track/die_button" method="_on_button_up"]

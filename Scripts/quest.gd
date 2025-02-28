@@ -59,20 +59,16 @@ func _on_submit_pressed() -> void:
 	Global.players.append(NameText.text)
 	# Clear the input field 
 	NameText.clear()
-	print("Input has added",input)	
 	match buttoncheck:
 		2:  if input.size() == 2:
 				text.text = "Great thats all the players"
-				print("Button pressed. input not stored:", input)
 				get_tree().change_scene_to_file("res://Scenes/tile_map_layer.tscn")
 				return
 		3:  if input.size() == 3:
 				text.text = "Great thats all the players"
-				print("Button pressed. input not stored:", input)
 				get_tree().change_scene_to_file("res://Scenes/tile_map_layer.tscn")
 				return
 		4:  if input.size() == 4:
 				text.text = "Great thats all the players"
-				print("Button pressed. input not stored:", input)
 				get_tree().change_scene_to_file("res://Scenes/tile_map_layer.tscn")
 				return
