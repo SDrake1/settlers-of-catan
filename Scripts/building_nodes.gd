@@ -46,12 +46,14 @@ func _input(event: InputEvent) -> void:
 							settlement()
 							Global.beginning_check[Global.current_player][0] = 1
 							%PlayerBoards.get_child(Global.current_player).get_child(1).victory_points += 1
+							%PlayerBoards.get_child(Global.current_player).get_child(1).num_towns -= 1
 							%turn_track.round_1()
 							
 						elif Global.round == 2 && Global.beginning_check[Global.current_player][2] == 0:
 							settlement()
 							Global.beginning_check[Global.current_player][2] = 1
 							%PlayerBoards.get_child(Global.current_player).get_child(1).victory_points += 1
+							%PlayerBoards.get_child(Global.current_player).get_child(1).num_towns -= 1
 							%turn_track.round_2()
 							
 					elif selected.get_node("Building").texture == settlement_img && selected.get_node("Building").modulate == Global.player_colors[Global.current_player]:
@@ -69,11 +71,13 @@ func _input(event: InputEvent) -> void:
 					elif Global.round == 1 && Global.beginning_check[Global.current_player][1] == 0:
 						road(-33)
 						Global.beginning_check[Global.current_player][1] = 1
+						%PlayerBoards.get_child(Global.current_player).get_child(1).num_roads -= 1
 						%turn_track.round_1()
 						
 					elif Global.round == 2 && Global.beginning_check[Global.current_player][3] == 0:
 						road(-33)
 						Global.beginning_check[Global.current_player][3] = 1
+						%PlayerBoards.get_child(Global.current_player).get_child(1).num_roads -= 1
 						%turn_track.round_2()
 					
 				"nw_se roads":
@@ -83,11 +87,13 @@ func _input(event: InputEvent) -> void:
 					elif Global.round == 1 && Global.beginning_check[Global.current_player][1] == 0:
 						road(33)
 						Global.beginning_check[Global.current_player][1] = 1
+						%PlayerBoards.get_child(Global.current_player).get_child(1).num_roads -= 1
 						%turn_track.round_1()
 						
 					elif Global.round == 2 && Global.beginning_check[Global.current_player][3] == 0:
 						road(33)
 						Global.beginning_check[Global.current_player][3] = 1
+						%PlayerBoards.get_child(Global.current_player).get_child(1).num_roads -= 1
 						%turn_track.round_2()
 					
 				"straight roads":
@@ -97,11 +103,13 @@ func _input(event: InputEvent) -> void:
 					elif Global.round == 1 && Global.beginning_check[Global.current_player][1] == 0:
 						road(90)
 						Global.beginning_check[Global.current_player][1] = 1
+						%PlayerBoards.get_child(Global.current_player).get_child(1).num_roads -= 1
 						%turn_track.round_1()
 						
 					elif Global.round == 2 && Global.beginning_check[Global.current_player][3] == 0:
 						road(90)
 						Global.beginning_check[Global.current_player][3] = 1
+						%PlayerBoards.get_child(Global.current_player).get_child(1).num_roads -= 1
 						%turn_track.round_2()
 
 func road(rot):

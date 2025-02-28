@@ -5,6 +5,7 @@ var game_board = [Vector2i(4,1), Vector2i(5,1), Vector2i(6,1),
 		Vector2i(3,3), Vector2i(4,3), Vector2i(5,3), Vector2i(6,3), Vector2i(7,3),
 		Vector2i(4,4), Vector2i(5,4), Vector2i(6,4), Vector2i(7,4),
 		Vector2i(4,5), Vector2i(5,5), Vector2i(6,5)]
+		
 var player_board_scene = preload("res://Scenes/player_board.tscn")
 func rand_tile(n: int) -> String:
 	var tile_types = ["ocean", "mountains", "desert", "fields", "hills", "forest", "pasture"]

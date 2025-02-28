@@ -1,0 +1,58 @@
+[gd_scene load_steps=3 format=3 uid="uid://bf82gkg026ecq"]
+
+[ext_resource type="Script" path="res://Scenes/player_name.gd" id="1_48pdb"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_jr35l"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(500, 200, 1)
+gravity = Vector3(0, 800, 0)
+scale_min = 3.0
+scale_max = 4.0
+anim_offset_min = 0.6254
+anim_offset_max = 1.0
+turbulence_enabled = true
+
+[node name="Node2D" type="Node2D"]
+
+[node name="pink" type="GPUParticles2D" parent="."]
+modulate = Color(0.952393, 0.425471, 0.558911, 1)
+position = Vector2(543, 0)
+amount = 50
+process_material = SubResource("ParticleProcessMaterial_jr35l")
+lifetime = 2.0
+visibility_rect = Rect2(-500, -100, 1000, 1000)
+
+[node name="blue" type="GPUParticles2D" parent="."]
+modulate = Color(0.37951, 0.683002, 0.708975, 1)
+position = Vector2(543, 0)
+amount = 50
+process_material = SubResource("ParticleProcessMaterial_jr35l")
+lifetime = 2.0
+visibility_rect = Rect2(-500, -100, 1000, 1000)
+
+[node name="yellow" type="GPUParticles2D" parent="."]
+modulate = Color(0.597814, 0.672513, 0.127509, 1)
+position = Vector2(543, 0)
+amount = 50
+process_material = SubResource("ParticleProcessMaterial_jr35l")
+lifetime = 2.0
+visibility_rect = Rect2(-500, -100, 1000, 1000)
+
+[node name="player_name" type="Label" parent="."]
+offset_left = 419.0
+offset_top = 232.0
+offset_right = 709.0
+offset_bottom = 299.0
+theme_override_font_sizes/font_size = 48
+text = "player name"
+horizontal_alignment = 1
+script = ExtResource("1_48pdb")
+
+[node name="label" type="Label" parent="."]
+offset_left = 510.0
+offset_top = 323.0
+offset_right = 616.0
+offset_bottom = 390.0
+theme_override_font_sizes/font_size = 48
+text = "wins"

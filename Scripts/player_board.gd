@@ -29,6 +29,11 @@ func _process(delta: float) -> void:
 	%OreCount.text = str(num_ore)
 	%WoolCount.text = str(num_wool)
 	
+	if victory_points == 10:
+		Global.winner = player_name
+		get_tree().change_scene_to_file("res://Scenes/win_scene.tscn")
+		#move to winner scene
+
 func build_town():
 	if num_towns > 0 and num_brick >= 1 and num_wheat >= 1 and num_wood >= 1 and num_wool >= 1:
 		num_towns -= 1
@@ -43,6 +48,7 @@ func build_town():
 func build_city():
 	if num_cities > 0 and num_ore >= 3 and num_wheat >= 2:
 		num_cities -= 1
+		num_towns += 1
 		victory_points += 1
 		num_ore -= 3
 		num_wheat -= 2

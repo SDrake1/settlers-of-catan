@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://3xwihgg5m45u"]
+[gd_scene load_steps=21 format=4 uid="uid://3xwihgg5m45u"]
 
 [ext_resource type="Texture2D" uid="uid://bcc87fyvktv30" path="res://Assets/tiles.png" id="1_6r8as"]
 [ext_resource type="Script" path="res://Scripts/tile_map_layer.gd" id="2_l5p4e"]
@@ -87,6 +87,9 @@ sources/1 = SubResource("TileSetAtlasSource_tkatt")
 sources/2 = SubResource("TileSetAtlasSource_h1xkh")
 sources/3 = SubResource("TileSetAtlasSource_ls7pr")
 sources/5 = SubResource("TileSetAtlasSource_4h6k1")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xsmni"]
+radius = 96.3636
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4yx6r"]
 radius = 14.5453
@@ -314,6 +317,142 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 36
 text = "1
 "
+
+[node name="area_checks" type="Node2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(1067.27, 543.058)
+
+[node name="1,1" type="Area2D" parent="area_checks"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_checks/1,1"]
+position = Vector2(-180, -295.255)
+shape = SubResource("CircleShape2D_xsmni")
+
+[node name="1,2" type="Area2D" parent="area_checks"]
+position = Vector2(176.364, -5.36337e-05)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_checks/1,2"]
+position = Vector2(-180, -295.255)
+shape = SubResource("CircleShape2D_xsmni")
+
+[node name="1,3" type="Area2D" parent="area_checks"]
+position = Vector2(354.545, 1.75742)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_checks/1,3"]
+position = Vector2(-180, -295.255)
+shape = SubResource("CircleShape2D_xsmni")
+
+[node name="2,1" type="Area2D" parent="area_checks"]
+position = Vector2(-87.2727, 152.9)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_checks/2,1"]
+position = Vector2(-180, -295.255)
+shape = SubResource("CircleShape2D_xsmni")
+
+[node name="2,2" type="Area2D" parent="area_checks"]
+position = Vector2(89.0909, 152.9)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_checks/2,2"]
+position = Vector2(-180, -295.255)
+shape = SubResource("CircleShape2D_xsmni")
+
+[node name="2,3" type="Area2D" parent="area_checks"]
+position = Vector2(265.455, 151.142)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_checks/2,3"]
+position = Vector2(-180, -295.255)
+shape = SubResource("CircleShape2D_xsmni")
+
+[node name="2,4" type="Area2D" parent="area_checks"]
+position = Vector2(441.818, 152.9)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_checks/2,4"]
+position = Vector2(-180, -295.255)
+shape = SubResource("CircleShape2D_xsmni")
+
+[node name="3,1" type="Area2D" parent="area_checks"]
+position = Vector2(-176.364, 302.285)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_checks/3,1"]
+position = Vector2(-180, -295.255)
+shape = SubResource("CircleShape2D_xsmni")
+
+[node name="3,2" type="Area2D" parent="area_checks"]
+position = Vector2(-1.52588e-05, 300.527)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_checks/3,2"]
+position = Vector2(-180, -295.255)
+shape = SubResource("CircleShape2D_xsmni")
+
+[node name="3,3" type="Area2D" parent="area_checks"]
+position = Vector2(176.364, 305.8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_checks/3,3"]
+position = Vector2(-180, -295.255)
+shape = SubResource("CircleShape2D_xsmni")
+
+[node name="3,4" type="Area2D" parent="area_checks"]
+position = Vector2(354.545, 304.042)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_checks/3,4"]
+position = Vector2(-180, -295.255)
+shape = SubResource("CircleShape2D_xsmni")
+
+[node name="3,5" type="Area2D" parent="area_checks"]
+position = Vector2(534.545, 309.315)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_checks/3,5"]
+position = Vector2(-180, -295.255)
+shape = SubResource("CircleShape2D_xsmni")
+
+[node name="4,1" type="Area2D" parent="area_checks"]
+position = Vector2(-89.0909, 455.184)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_checks/4,1"]
+position = Vector2(-180, -295.255)
+shape = SubResource("CircleShape2D_xsmni")
+
+[node name="4,2" type="Area2D" parent="area_checks"]
+position = Vector2(85.4545, 458.699)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_checks/4,2"]
+position = Vector2(-180, -295.255)
+shape = SubResource("CircleShape2D_xsmni")
+
+[node name="4,3" type="Area2D" parent="area_checks"]
+position = Vector2(267.273, 455.184)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_checks/4,3"]
+position = Vector2(-180, -295.255)
+shape = SubResource("CircleShape2D_xsmni")
+
+[node name="4,4" type="Area2D" parent="area_checks"]
+position = Vector2(447.273, 460.457)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_checks/4,4"]
+position = Vector2(-180, -295.255)
+shape = SubResource("CircleShape2D_xsmni")
+
+[node name="5,1" type="Area2D" parent="area_checks"]
+position = Vector2(-1.81821, 604.569)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_checks/5,1"]
+position = Vector2(-180, -295.255)
+shape = SubResource("CircleShape2D_xsmni")
+
+[node name="5,2" type="Area2D" parent="area_checks"]
+position = Vector2(174.545, 604.569)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_checks/5,2"]
+position = Vector2(-180, -295.255)
+shape = SubResource("CircleShape2D_xsmni")
+
+[node name="5,3" type="Area2D" parent="area_checks"]
+position = Vector2(354.545, 611.599)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_checks/5,3"]
+position = Vector2(-180, -295.255)
+shape = SubResource("CircleShape2D_xsmni")
 
 [node name="building nodes" type="Node2D" parent="."]
 position = Vector2(1061.82, 543.058)

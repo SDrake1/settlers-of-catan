@@ -32,5 +32,30 @@ func find_resources():
 			if node.text == str(roll_result):
 				node["theme_override_colors/font_color"] = Color.RED
 				#create a way to look at what resources people get
+				var num_index = %numbers.get_children().find(node)
+				var resource_tile = $"../..".get_cell_atlas_coords($"../..".game_board[num_index])
+				var res : int
+				var player_index : int
+					
+				for area in %area_checks.get_child(num_index).get_overlapping_areas():
+					if area.get_parent().name == "buildings" && area.get_children().size() > 1:
+						if area.get_child(1).texture == load("res://Assets/settlement.png"):
+							res = 1
+						elif area.get_child(1).texture == load("res://Assets/city.png"):
+							res = 2
+							
+						player_index = Global.player_colors.find(area.get_child(1).modulate)
+						
+					#check resource type
+						if resource_tile == Vector2i(1, 0):
+							%PlayerBoards.get_child(player_index).get_child(1).num_ore += res
+						elif resource_tile == Vector2i(3, 0):
+							%PlayerBoards.get_child(player_index).get_child(1).num_wheat += res
+						elif resource_tile == Vector2i(4, 0):
+							%PlayerBoards.get_child(player_index).get_child(1).num_brick += res
+						elif resource_tile == Vector2i(5, 0):
+							%PlayerBoards.get_child(player_index).get_child(1).num_wood += res
+						elif resource_tile == Vector2i(6, 0):
+							%PlayerBoards.get_child(player_index).get_child(1).num_wool += res
 				
 	%end_turn.disabled = false
