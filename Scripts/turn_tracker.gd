@@ -26,6 +26,7 @@ func round_2():
 		else:
 			Global.round += 1
 			%die_button.disabled = false
+			#remove tutorial text
 
 func _on_button_button_up() -> void:
 	#on round 3+ the game continues as normal

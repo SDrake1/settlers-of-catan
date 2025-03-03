@@ -54,11 +54,32 @@ func _input(event: InputEvent) -> void:
 							Global.beginning_check[Global.current_player][2] = 1
 							%PlayerBoards.get_child(Global.current_player).get_child(1).victory_points += 1
 							%PlayerBoards.get_child(Global.current_player).get_child(1).num_towns -= 1
+							
+							#get resources for second settlement
+							for area in selected.get_overlapping_areas():
+								if area.get_parent().name == "area_checks":
+									#get resource types
+									var num_index = %area_checks.get_children().find(area)
+									var resource_tile = $"..".get_cell_atlas_coords($"..".game_board[num_index])
+									var player_index = Global.player_colors.find(selected.get_child(1).modulate)
+									#add resource to player
+									if resource_tile == Vector2i(1, 0):
+										%PlayerBoards.get_child(player_index).get_child(1).num_ore += 1
+									elif resource_tile == Vector2i(3, 0):
+										%PlayerBoards.get_child(player_index).get_child(1).num_wheat += 1
+									elif resource_tile == Vector2i(4, 0):
+										%PlayerBoards.get_child(player_index).get_child(1).num_brick += 1
+									elif resource_tile == Vector2i(5, 0):
+										%PlayerBoards.get_child(player_index).get_child(1).num_wood += 1
+									elif resource_tile == Vector2i(6, 0):
+										%PlayerBoards.get_child(player_index).get_child(1).num_wool += 1
+									
 							%turn_track.round_2()
 							
 					elif selected.get_node("Building").texture == settlement_img && selected.get_node("Building").modulate == Global.player_colors[Global.current_player]:
 						if %PlayerBoards.get_child(Global.current_player).get_child(1).build_city():
 							selected.get_node("Building").texture = city_img
+							%build_audio.play()
 						
 					else:
 						pass
@@ -113,6 +134,7 @@ func _input(event: InputEvent) -> void:
 						%turn_track.round_2()
 
 func road(rot):
+	%build_audio.play()
 	var road = Sprite2D.new()
 	road.texture = road_img
 	road.scale = Vector2(1.1, 1.1)
@@ -121,6 +143,7 @@ func road(rot):
 	selected.add_child(road)
 	
 func settlement():
+	%build_audio.play()
 	#create instance of building
 	var new_building = settlement_scene.instantiate()
 	new_building.modulate = Global.player_colors[Global.current_player]

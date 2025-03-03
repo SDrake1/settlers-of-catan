@@ -1,12 +1,14 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1740712553
+::res://::1741033932
 catan-logo.png::CompressedTexture2D::8078228094098544878::1740701863::1740701864::1::::<><>::
 game_board.tscn::PackedScene::742038569649069029::1740683133::0::1::::<><>::uid://bcc87fyvktv30::::res://Assets/tiles.png
-::res://Assets/::1740701839
+::res://Assets/::1741033935
 big_circle.png::CompressedTexture2D::1682586906558846964::1738573936::1740682299::1::::<><>::
 buildingcosts.png::CompressedTexture2D::7037736177307271277::1740700232::1740700232::1::::<><>::
 city.png::CompressedTexture2D::3203058335239766532::1738573936::1740682299::1::::<><>::
+diceshake-90280.mp3::AudioStreamMP3::6516154903327302323::1741033935::1741033935::1::::<><>::
 dot.png::CompressedTexture2D::4599763569059744489::1738573936::1740682299::1::::<><>::
+flip-switch-304548.mp3::AudioStreamMP3::8673379412214509970::1741033927::1741033932::1::::<><>::
 Resource Icons.png::CompressedTexture2D::1712805272115003079::1740627589::1740682299::1::::<><>::
 settlement.png::CompressedTexture2D::3011183577494652486::1738573936::1740682299::1::::<><>::
 street.png::CompressedTexture2D::2982147312251755790::1738573936::1740682299::1::::<><>::
@@ -18,18 +20,20 @@ Dice3.png::CompressedTexture2D::3054143259044255824::1740452630::1740682299::1::
 Dice4.png::CompressedTexture2D::2355201444577965020::1740452630::1740682299::1::::<><>::
 Dice5.png::CompressedTexture2D::1439338426473283891::1740452630::1740682299::1::::<><>::
 Dice6.png::CompressedTexture2D::5283610786287133186::1740452630::1740682299::1::::<><>::
-::res://Scenes/::1740705498
-Building.tscn::PackedScene::6085912716105659047::1740705311::0::1::::<><>::uid://bi5v0ve1vvaxa::::res://Assets/settlement.png
-Dice.tscn::PackedScene::2756726215734755702::1740705311::0::1::::<><>::res://Scripts/Dice.gd<>uid://c7ai8l2easgvl::::res://Dice/Dice1.png
-player_board.tscn::PackedScene::7527363375964805951::1740705311::0::1::::<><>::res://Scripts/player_board.gd<>uid://ynxwgnkrhgdb::::res://Assets/Resource Icons.png
-quest.tscn::PackedScene::8503994437147671110::1740705498::0::1::::<><>::res://Scripts/quest.gd<>uid://dndfibmb51q0m::::res://catan-logo.png
-tile_map_layer.tscn::PackedScene::2014118747645869316::1740705311::0::1::::<><>::uid://bcc87fyvktv30::::res://Assets/tiles.png<>res://Scripts/tile_map_layer.gd<>uid://x8b7wmmemhbw::::res://Assets/big_circle.png<>res://Scripts/building_nodes.gd<>res://Scripts/turn_tracker.gd<>uid://bfjm438k6j135::::res://Scenes/Dice.tscn<>res://Scripts/die_button.gd<>uid://c7jeqsr48gjmr::::res://Assets/buildingcosts.png
-::res://Scripts/::1740701235
-building_nodes.gd::GDScript::-1::1740701038::0::1::::<>Node2D<>::
-Dice.gd::GDScript::-1::1740695071::0::1::::<>Control<>::
-die_button.gd::GDScript::-1::1740700392::0::1::::<>Button<>::
-global.gd::GDScript::-1::1740697713::0::1::::<>Node<>::
-player_board.gd::GDScript::-1::1740701235::0::1::::<>Control<>::
+::res://Scenes/::1741033862
+Building.tscn::PackedScene::6085912716105659047::1741033346::0::1::::<><>::uid://bi5v0ve1vvaxa::::res://Assets/settlement.png
+Dice.tscn::PackedScene::2756726215734755702::1741032852::0::1::::<><>::res://Scripts/Dice.gd<>uid://c7ai8l2easgvl::::res://Dice/Dice1.png
+player_board.tscn::PackedScene::7527363375964805951::1741033346::0::1::::<><>::res://Scripts/player_board.gd<>uid://ynxwgnkrhgdb::::res://Assets/Resource Icons.png
+quest.tscn::PackedScene::8503994437147671110::1741033346::0::1::::<><>::res://Scripts/quest.gd<>uid://dndfibmb51q0m::::res://catan-logo.png
+tile_map_layer.tscn::PackedScene::2014118747645869316::1741033862::0::1::::<><>::uid://bcc87fyvktv30::::res://Assets/tiles.png<>res://Scripts/tile_map_layer.gd<>uid://x8b7wmmemhbw::::res://Assets/big_circle.png<>res://Scripts/building_nodes.gd<>res://Scripts/turn_tracker.gd<>uid://bfjm438k6j135::::res://Scenes/Dice.tscn<>res://Scripts/die_button.gd<>uid://c7jeqsr48gjmr::::res://Assets/buildingcosts.png
+win_scene.tscn::PackedScene::2807139977010877228::1741033346::0::1::::<><>::res://Scripts/player_name.gd
+::res://Scripts/::1741033932
+building_nodes.gd::GDScript::-1::1741033345::0::1::::<>Node2D<>::
+Dice.gd::GDScript::-1::1741033577::0::1::::<>Control<>::
+die_button.gd::GDScript::-1::1740716286::0::1::::<>Button<>::
+global.gd::GDScript::-1::1740718200::0::1::::<>Node<>::
+player_board.gd::GDScript::-1::1740718343::0::1::::<>Control<>::
+player_name.gd::GDScript::-1::1740718223::0::1::::<>Label<>::
 quest.gd::GDScript::-1::1740697322::0::1::::<>Control<>::
-tile_map_layer.gd::GDScript::-1::1740627589::0::1::::<>TileMapLayer<>::
-turn_tracker.gd::GDScript::-1::1740700065::0::1::::<>CanvasGroup<>::
+tile_map_layer.gd::GDScript::-1::1740712978::0::1::::<>TileMapLayer<>::
+turn_tracker.gd::GDScript::-1::1741032841::0::1::::<>CanvasGroup<>::

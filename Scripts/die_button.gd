@@ -7,6 +7,7 @@ var roll_result
 
 func _on_button_up() -> void:
 	disabled = true
+	%dice_audio.play()
 	for node in %numbers.get_children():
 		node["theme_override_colors/font_color"] = Color.BLACK
 	%die1.roll()

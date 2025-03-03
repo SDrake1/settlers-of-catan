@@ -11,7 +11,7 @@ preload("res://Dice/Dice6.png")
 var dicenum: int
 
 var is_rolling = false
-var roll_duration = 1.5  # Roll duration in seconds
+var roll_duration = 1  # Roll duration in seconds
 var roll_time_left = 0.0
 
 func _ready() :

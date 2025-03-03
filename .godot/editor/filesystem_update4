@@ -1,12 +1,10 @@
 res://Scenes/tile_map_layer.tscn
-res://Scripts/die_button.gd
-res://Scripts/tile_map_layer.gd
+res://Scripts/building_nodes.gd
+res://Scripts/turn_tracker.gd
 res://Scenes/player_board.tscn
 res://Scenes/quest.tscn
 res://Scenes/Building.tscn
 res://Scenes/Dice.tscn
-res://Scripts/building_nodes.gd
-res://Scripts/player_board.gd
-res://Scripts/global.gd
 res://Scenes/win_scene.tscn
-res://Scenes/player_name.gd
+res://Scripts/Dice.gd
+res://Scripts/die_button.gd

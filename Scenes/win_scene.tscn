@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bf82gkg026ecq"]
 
-[ext_resource type="Script" path="res://Scenes/player_name.gd" id="1_48pdb"]
+[ext_resource type="Script" path="res://Scripts/player_name.gd" id="1_48pdb"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_jr35l"]
 particle_flag_disable_z = true
