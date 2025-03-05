@@ -27,7 +27,7 @@ func resource_numbers():
 	
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	var atlas_id = 3;
+	var atlas_id = 5;
 	var tiles_available = {"forest": 4, "desert": 1, "pasture": 4, "mountains": 3,
 			"hills": 3, "fields": 4}
 	
