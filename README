@@ -1,0 +1,6 @@
+In order to play this game, go to itch.io/Green_Settlers to download the .exe and .pck files. They must be in the same folder to run the game.
+If you wish to compile the game from the source code in this repository, you will need the Godot engine editor software on your computer.
+Clone the repo on your computer, import the file with the .godot file into Godot, then go to Project/Export and add a Windows preset. 
+You may need to download the preset first.
+Then, name the file and select a directory to export it to, and click the Export project button. The .exe and .pck files will be generated and put into the selected directory.
+To run the game, double click the .exe file.
